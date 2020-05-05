@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainFile/bootstrap.css">
+  <title>alarmClock</title>
+</head>
+<body onload="checkTime(),setInterval(checkTime,2000)">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MY ALARM CLOCK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a href="" class="nav nav-link">HOME</a>
+    </div>
+  </nav>
+  <div class="container mt-3 text-center">
+    <div class="form-group">
+      <div class="row">
+        <div class="col mt-2">
+          <label for="name">Name</label>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="name" placeholder="Alarm Name">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <select name="hour" id="hour" class="form-control"></select>
+      </div>
+      <div class="col">
+        <select name="mins" id="mins" class="form-control"></select>
+      </div>
+      <div class="col">
+        <select name="day" id="day" class="form-control">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+    </div>
+    <div class="container">
+      <textarea name="content" id="content" class="form-control mt-3" placeholder="for what do you want to set alarm"></textarea>
+    </div>
+    <div class="text-center mt-3 ">
+      <button id="startAlarm" class="btn btn-primary">SET</button>
+    </div>
+    <table class="table mt-2">
+      <thead>
+        <tr>
+          <th scope="col">SNO</th>
+          <th scope="col">alarmName</th>
+          <th scope="col">AlarmTime</th>
+          <th scope="col">ON/OFF</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="alarmDiv" class="px-2">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="mainFile/jQuery.js"></script>
+  <script src="mainFile/bootstrap.js"></script>
+  <script src="mainFile/popper.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
