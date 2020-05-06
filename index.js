@@ -12,8 +12,6 @@ let cdBtn = document.getElementById("cdBtn");
 let showHours = "";
 let showMins = "";
 
-localStorage.clear();
-
 //SETTING VALUES TO THE SELECT BOXES
 for (let i = 1; i <= 12; i++) {
   showHours += `<option value='${i}'>${i}</option>`
