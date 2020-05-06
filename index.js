@@ -143,7 +143,7 @@ function checkTime() {
     let toggleBtn = document.getElementById(element['name']);
     if (toggleBtn.checked) {
       if (element['time'] == checkTimeVar) {
-        let audio = new Audio('./media/alarm.ogg');
+        let audio = new Audio('./alarm.ogg');
         audio.play();
         toggleBtn.style.backgroundColor = "red";
       }
